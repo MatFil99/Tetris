@@ -1,7 +1,7 @@
 
 
-Point3D: Main.o ./objects/Point.o ./manageAndInterface/Manage.o ./manageAndInterface/Interface.o ./objects/Block.o ./objects/IntNum.o ./engine/Map.o
-	g++ Main.o ./objects/Point.o ./manageAndInterface/Manage.o ./manageAndInterface/Interface.o ./objects/IntNum.o ./objects/Block.o ./engine/Map.o -o Point3D
+Tetris: Main.o ./objects/Point.o ./manageAndInterface/Manage.o ./manageAndInterface/Interface.o ./objects/Block.o ./objects/IntNum.o ./engine/Map.o
+	g++ Main.o ./objects/Point.o ./manageAndInterface/Manage.o ./manageAndInterface/Interface.o ./objects/IntNum.o ./objects/Block.o ./engine/Map.o -o Tetris
 
 Main.o: Main.cpp ./list/List.h ./engine/Map.h
 	g++ -c Main.cpp ./list/List.h ./engine/Map.h
@@ -32,7 +32,7 @@ clean:
 	
 
 start:
-	./Point3D
+	./Tetris
 
 startVal:
-	valgrind --leak-check=full ./Point3D
+	valgrind --leak-check=full ./Tetris
